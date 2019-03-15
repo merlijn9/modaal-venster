@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    margin: 0;
+}
+
+.album {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 80vw;
+    grid-gap: 1.2em;
+}
+
+.grid img {
+    max-width: 100%;
+}
+
+img.mKnop {
+    max-width: 100px;
+}
+
+.alles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 1em;
+    padding: 1.2em;
+    justify-items: center;
+}
+
+h1 {
+    grid-column: 1/-3;
+}
+
+.m-Background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.modaal {
+    max-width: 80%;
+    padding: 2em;
+    border-radius: 1em;
+    background-color: #ffffff;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 1em;
+    max-height: 95vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-row-gap: 1em;
+    animation: fadeIn 1.5s;
+}
+
+img, form {
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+}
+
+.mKnop:hover {
+    color: red;
+}
+
+.mKnop {
+    cursor: pointer;
+}
+
+img.mKnop {
+    max-width: 100px;
+    transition: transform .3s ease-out, box-shadow .4 ease-out;
+}
+
+img.mKnop:hover {
+    transform: scale(1.1);
+    box-shadow: .5em .5em 2em rgba(0, 0, 0, 0.7);
+}
+
+.closeButton {
+    width: 2em;
+    justify-self: end;
+}
+
+.closeButton:hover {
+    color: red;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.alles .mContent {
+    display: none;
+}
